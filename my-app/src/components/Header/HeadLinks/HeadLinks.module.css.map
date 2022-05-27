@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,MAAM,CAAC;EACL,YAAY,EAAE,IAAI;CACnB",
+    "sources": [
+        "HeadLinks.module.scss"
+    ],
+    "names": [],
+    "file": "HeadLinks.module.css"
+}

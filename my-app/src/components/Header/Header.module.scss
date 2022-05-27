@@ -1,0 +1,54 @@
+@import "../variables";
+* {
+  font-family: Roboto;
+  list-style-type: none;
+  a {
+    text-decoration: none;
+    color: $headLniksColor;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  .headContainer {
+    width: 80%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.headContainer {
+  .headLogo {
+    font-family: Poppins;
+    color: $logoColor;
+    font-size: 20px;
+    width: 40%;
+  }
+  .headLinkContainer {
+    width: 50%;
+    display: flex;
+    align-items: center;
+
+    ul {
+      display: flex;
+    }
+  }
+}
+.supportBtn {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: $headLniksColor;
+  border: 1px #ff5b79 solid;
+  padding: 6px 5px;
+  border-radius: 20px;
+  right: 0;
+}

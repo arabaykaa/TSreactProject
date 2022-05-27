@@ -1,0 +1,119 @@
+.mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.mainContainer .borderBG {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 400px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: #ffffff solid 1px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.15);
+  margin: 100px 0 50px 0;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  color: white;
+  text-align: left;
+  font-size: 16px;
+}
+
+.container .nameContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.container .nameContainer .inputnames {
+  width: 40%;
+  height: 25px;
+  font-size: 17px;
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+}
+
+.container .loginTxt {
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.container .labeltxt {
+  margin: 20px 0 15px 0;
+}
+
+.container .inputs {
+  width: auto;
+  height: 25px;
+  background-color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  border-radius: 5px;
+}
+
+.container .btnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 40px;
+}
+
+.container .btnContainer .backLink {
+  color: lightblue;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.container .btnContainer .backLink:hover {
+  color: #ffffff;
+}
+
+.container .btnContainer .submitBtn {
+  width: 50%;
+  height: 30px;
+  font-weight: bold;
+  font-size: 19px;
+  background-color: aliceblue;
+  color: #000000;
+  border-radius: 4px;
+}
+
+.container .btnContainer .submitBtn:hover {
+  background-color: #000000;
+  -webkit-transform: scale(1.01, 1.01);
+          transform: scale(1.01, 1.01);
+  color: aliceblue;
+}
+/*# sourceMappingURL=Registration.module.css.map */

@@ -1,0 +1,23 @@
+.mainContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+.container {
+  margin: 110px 0 10px 0;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.todotxt {
+  font-size: 32px;
+  font-weight: bold;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,62 @@
+.todoInput {
+  width: auto;
+  height: 30px;
+  font-size: 20px;
+}
+
+.labelT {
+  width: 100%;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.todo {
+  .completed {
+    text-decoration: line-through;
+    color: aqua;
+  }
+}
+.outputtodo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 5px 0;
+  font-size: 25px;
+  color: #f3f3f3;
+  border: #f3f3f3 solid 1px;
+  margin: 8px 0;
+}
+.check {
+  width: 5%;
+  input {
+    width: 20px;
+    height: 20px;
+  }
+}
+.outputtxt {
+  width: 85%;
+}
+.deletebtn {
+  font-size: 20px;
+  width: 10%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+}
+
+.returnUL {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.formcontainer {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  margin-bottom: 20px;
+}
