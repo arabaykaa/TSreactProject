@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { JsxEmit } from "typescript";
 import { ITodo } from "../../interfaces";
 import c from "./ToDo.module.css";
 import ToDoList from "./ToDoDir/ToDoList";
 import ToDoReturn from "./ToDoDir/ToDoReturn";
 
+declare var confirm: (question: string) => boolean;
+
 const ToDo: React.FC = () => {
   const [todos, setTodos] = useState<ITodo[]>([]);
 
   useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("todos") || "[]") as ITodo[];
-    //localStorage.getItem("todos") || [];
-    //setTodos(JSON.parse(saved));
-    setTodos(saved);
+    const saved = localStorage.getItem("todos") || "[]";
+    setTodos(JSON.parse(saved));
   }, []);
+
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
+
   }, [todos]);
 
   const AddHandler = (title: string) => {
@@ -24,14 +27,14 @@ const ToDo: React.FC = () => {
       completed: false,
     };
     if (title !== "") {
-      setTodos((prev) => [newTodo, ...todos]);
+      setTodos((prev) => [newTodo, ...prev]);
     }
   };
 
   const toggleHandler = (id: number) => {
     setTodos((prev) =>
       prev.map((todo) => {
-        if (todo.id === id) {
+        if (todo.id == id) {
           todo.completed = !todo.completed;
         }
         return todo;
@@ -40,7 +43,7 @@ const ToDo: React.FC = () => {
   };
 
   const removeHandler = (id: number) => {
-    const shure = window.confirm("Are you shure?");
+    const shure = confirm("Are you shure?");
     if (shure) {
       setTodos((prev) => prev.filter((todo) => todo.id !== id));
     }

@@ -12,8 +12,9 @@
 
 .todo {
   .completed {
-    text-decoration: line-through;
-    color: aqua;
+    span {
+      text-decoration: line-through;
+    }
   }
 }
 .outputtodo {

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import c from "./ToDoStyle.module.css";
 
 interface TodoFormProps {
@@ -6,12 +6,16 @@ interface TodoFormProps {
 }
 
 const ToDoList: React.FC<TodoFormProps> = (props) => {
-  const ref = useRef<HTMLInputElement>(null);
+  const [title, setTitle] = useState<string>("");
 
-  const keyPress = (event: React.KeyboardEvent) => {
+  const changeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setTitle(event.target.value);
+  };
+
+  const keyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      props.onAdd(ref.current!.value);
-      ref.current!.value = "";
+      props.onAdd(event.currentTarget!.value);
+      setTitle("");
     }
   };
 
@@ -22,13 +26,14 @@ const ToDoList: React.FC<TodoFormProps> = (props) => {
           Write ToDo
         </label>
         <input
-          ref={ref}
           type="text"
           id="title"
           placeholder="to-do"
           className={c.todoInput}
-          onKeyPress={keyPress}
-        ></input>
+          onKeyPress={(event) => keyPress(event)}
+          onChange={changeHandler}
+          value={title}
+        />
       </div>
     </div>
   );

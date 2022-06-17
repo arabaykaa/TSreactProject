@@ -36,10 +36,9 @@ export default function LogIn() {
               className={c.inputs}
             />
             <div className={c.btnContainer}>
-              {/* <Link to="/RegistrationForm" className={c.registrationLink}>
+              <Link to="/Registration" className={c.registrationLink}>
                 Create account
-              </Link> */}
-              <a href="/">Create account</a>
+              </Link>
               <input
                 type="submit"
                 value="Submit"

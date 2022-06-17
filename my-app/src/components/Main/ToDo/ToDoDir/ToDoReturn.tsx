@@ -22,12 +22,12 @@ const ToDoReturn: React.FC<ToDoTitleProps> = ({
     <ul className={c.returnUL}>
       {todos.map((todo) => {
         const classes = ["todo"];
-        if (todo.completed) {
+        if (todo.completed == true) {
           classes.push("completed");
         }
 
         return (
-          <li className={classes.join(" ")} key={todo.id}>
+          <li className={classes.join("")} key={todo.id}>
             <label className={c.outputtodo}>
               <div className={c.check}>
                 <input

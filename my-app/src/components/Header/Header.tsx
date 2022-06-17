@@ -1,6 +1,6 @@
 import h from "./Header.module.css";
 import { HeadLinks } from "./HeadLinks/HeadLinks";
-// import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -10,15 +10,14 @@ export default function Header() {
           <div className={h.headLogo}>&#128128;BRAINSTORM</div>
           <div className={h.headLinkContainer}>
             <ul>
-              <HeadLinks linkurl="/" linkName="Main" />
-              <HeadLinks linkurl="/" linkName="To-Do" />
+              <HeadLinks linkurl="/MainP" linkName="Main" />
+              <HeadLinks linkurl="/ToDo" linkName="To-Do" />
               <HeadLinks linkurl="/" linkName="About us" />
               <HeadLinks linkurl="/" linkName="Contacts" />
             </ul>
           </div>
           <div className={h.supportBtn}>
-            {/* <NavLink to="/LogInForm">LogIn</NavLink> */}
-            <a href="/">LogIn</a>
+            <Link to="/LogIn">LogIn</Link>
           </div>
         </div>
       </header>

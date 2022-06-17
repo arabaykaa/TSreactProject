@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./Footer/Footer";
 import MainP from "./Main/MainP/MainP";
@@ -9,24 +8,15 @@ import Registration from "./Forms/Registration/Registration";
 
 export default function Home() {
   return (
-    //<BrowserRouter>
-    // <Routes>
-    //   <Header />
-    //   {/* <Routes>
-    //       <Route path="/ToDo" element={<ToDo />} />
-    //       <Route path="/MainP" element={<MainP />} />
-    //     </Routes> */}
-    //   <MainP />
-    //   <Footer />
-    // </Routes>
-    //</BrowserRouter>
-    <>
+    <BrowserRouter>
       <Header />
-      <ToDo />
-      <MainP />
-      <LogIn />
-      <Registration />
+      <Routes>
+        <Route path="/ToDo" element={<ToDo />} />
+        <Route path="/MainP" element={<MainP />} />
+        <Route path="/LogIn" element={<LogIn />} />
+        <Route path="/Registration" element={<Registration />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }

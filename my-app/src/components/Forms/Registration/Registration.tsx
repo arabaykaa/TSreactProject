@@ -28,10 +28,9 @@ export default function Registration() {
           <label className={c.labeltxt}>Password</label>
           <input type="password" name="password" className={c.inputs} />
           <div className={c.btnContainer}>
-            {/* <Link to="/LogInForm" className={c.backLink}>
+            <Link to="/LogIn" className={c.backLink}>
               Back
-            </Link> */}
-            <a href="/">Back</a>
+            </Link>
             <input type="submit" value="Submit" className={c.submitBtn} />
           </div>
         </form>

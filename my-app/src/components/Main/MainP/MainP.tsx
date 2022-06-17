@@ -20,7 +20,7 @@ export default function MainP() {
               his tragic death. With his hogwarts certified power he promise to
               be a hero for all of ghostkind.
             </p>
-            <a href="/" className={c.button}>
+            <a href="" className={c.button}>
               Book now
             </a>
           </div>
